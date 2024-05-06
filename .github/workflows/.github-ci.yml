@@ -1,0 +1,13 @@
+name: Num-Alpha Conversions
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    uses: denqiu/reusable-workflows/.github/workflows/py-setup-test.yml@main
+    with:
+      version: 3.12
+      install_file: requirements.txt
+      test_folder: tests
