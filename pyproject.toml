@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "py-num-alpha-conversions"
+version = "0.1.0"
+description = ""
+authors = ["Dennis Qiu <dennisqiu123@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+[tool.poetry.group.dev.dependencies]
+numpy = "1.26.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
