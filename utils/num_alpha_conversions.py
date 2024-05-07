@@ -240,7 +240,7 @@ class NumAlphaConversions:
         # searched_indices = indices[search_multiples]
         # searched_powers = pow_indices[search_multiples]
         # searched_sums = sum_pow[search_multiples]
-        affected_non_multiples = []
+        affected_ranges = []
         if search_multiples.any():
             # int array
             # +1 if multiple == power else +1+(1-1), +1+(2-1)
@@ -255,11 +255,11 @@ class NumAlphaConversions:
             # (From Gemini) Numpy equivalent of zip, range, and flatten functions combined.
             # Note: vectorize doesn't work.
             # int array
-            affected_non_multiples = numpy.concatenate(numpy.frompyfunc(numpy.arange, nin=2, nout=1)(
+            affected_ranges = numpy.concatenate(numpy.frompyfunc(numpy.arange, nin=2, nout=1)(
                 inclusive_start_range, exclusive_end_range
             ))
         # int array
-        affected_indices = numpy.concatenate([indices[search_exact_numbers], affected_non_multiples])
+        affected_indices = numpy.concatenate([indices[search_exact_numbers], affected_ranges])
         return array_indices[numpy.isin(indices, affected_indices)]
 
     def fast_alt_num_to_alpha(self, indices, letter_type: LetterType) -> tuple[numpy.ndarray, numpy.ndarray]:
