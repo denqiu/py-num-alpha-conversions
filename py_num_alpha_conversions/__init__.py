@@ -10,8 +10,6 @@ class LetterType(Enum):
 
 class NumAlphaConversions:
     """
-    Author: Dennis Qiu <dennisqiu123@gmail.com>
-
     Uses base-26 system to:
     1: Convert a number to letters (like column letters in Excel).
     2: Convert letters back to numbers.
