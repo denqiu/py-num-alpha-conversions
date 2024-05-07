@@ -4,7 +4,7 @@ import unittest
 import numpy
 
 import main
-from utils.num_alpha_conversions import NumAlphaConversions, LetterType
+from py_num_alpha_conversions import NumAlphaConversions, LetterType
 
 logging.basicConfig(level=logging.INFO)
 
