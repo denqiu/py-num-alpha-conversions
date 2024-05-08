@@ -6,17 +6,6 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Setup Python v3.12
-        uses: actions/setup-python@v4
-        with:
-          python-version: 3.12
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install poetry
-          poetry install
-      - name: Run tests
-        run: poetry run pytest -v -s
+    uses: denqiu/reusable-tools/.github/workflows/python/py-poetry-test.yml@main
+    with:
+      version: 3.12
