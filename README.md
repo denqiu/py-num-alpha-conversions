@@ -2,7 +2,7 @@
 <div>
     Installation: Currently a repo package.
     <ul>
-        <li>To install: <code>pip install git+[https-path-to-git]</code></li>
+        <li>To install: <code>pip install git+[https-path-to-git]@tag</code></li>
     </ul>
     Python Version: 3.12
     <br>
